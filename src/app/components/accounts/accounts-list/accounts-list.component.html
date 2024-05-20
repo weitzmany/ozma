@@ -1,0 +1,7 @@
+<div class="list-group list-group-flush border-bottom scrollarea">
+  <app-accounts-list-item
+    *ngFor="let account of accounts; let i = index"
+    [accountInput]="account"
+    [indexInput]="i"
+  ></app-accounts-list-item>
+</div>

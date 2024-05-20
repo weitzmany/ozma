@@ -1,0 +1,20 @@
+<a
+  href="#"
+  class="list-group-item list-group-item-action _active py-3 lh-tight"
+  aria-current="true"
+  routerLink="{{ index }}"
+  routerLinkActive="active"
+>
+  <div class="d-flex w-100 align-items-center justify-content-between">
+    <strong class="mb-1">{{ account.name }}</strong>
+    <small>({{ account.type }})</small>
+  </div>
+  <div class="col-10 mb-1">
+    <span [ngStyle]="{ color: account.balance < 0 ? 'red' : 'green' }">
+      {{ account.balance | currency }}
+    </span>
+    <small *ngIf="account.frame">
+      ({{ account.frame | currency }})
+    </small>
+  </div>
+</a>
